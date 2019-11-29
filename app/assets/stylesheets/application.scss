@@ -12,6 +12,20 @@
 @import "components/index";
 @import "pages/index";
 
-h1 {
-  margin: 20px;
+body {
+  background-color: white;
+}
+.container {
+  margin-top: 58px;
+  h1 {
+    color:white;
+  }
+}
+
+.in-line {
+  display: flex;
+}
+
+.flex-item {
+  width: 50%;
 }

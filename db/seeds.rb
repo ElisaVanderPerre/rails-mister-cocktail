@@ -23,7 +23,8 @@ url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 user = JSON.parse(open(url).read)
 drinks = user['drinks'].first(10)
 drinks.each do |drink|
-  Cocktail.create(name: drink['strIngredient1'])
+  @cocktail = Cocktail.create(name: drink['strIngredient1'], remote_photo_url: "https://res.cloudinary.com/elisa/image/upload/v1575027383/q0v4myfkwsxju9ry0w9g.jpg")
+  p @cocktail
 end
 
 p "#{Cocktail.count} cocktails added"

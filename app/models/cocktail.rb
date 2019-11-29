@@ -3,4 +3,5 @@ class Cocktail < ApplicationRecord
   has_many :doses, :dependent => :delete_all
   has_many :reviews, :dependent => :delete_all
   has_many :ingredients, through: :doses
+  mount_uploader :photo, PhotoUploader
 end
